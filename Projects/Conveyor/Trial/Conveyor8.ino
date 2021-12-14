@@ -33,12 +33,15 @@ char ssid[] = "Vkurpmax";
 char pass[] = "lumos maxima";
 
 BlynkTimer timer;
-void myTimerEvent(){
-Blynk.virtualWrite(V1,distance);
-Blynk.virtualWrite(V2,count);
-Blynk.virtualWrite(V3,countkecil);
-Blynk.virtualWrite(V4,countbesar);
+
+void myTimerEvent()
+{
+  Blynk.virtualWrite(V1,distance);
+  Blynk.virtualWrite(V2,count);
+  Blynk.virtualWrite(V3,countkecil);
+  Blynk.virtualWrite(V4,countbesar);
 }
+
 void setup()
 {
   Serial.begin(9600);
@@ -54,8 +57,6 @@ void setup()
 
   servo1.attach(12);// d6 node
   servo2.attach(14);                              // D5 NodeMCU ESP8266
-
-  digitalWrite(IN4, LOW);
 
   servo1.write(105);
   servo2.write(93);
@@ -84,7 +85,7 @@ void loop()
 
 void pushbutton()
 {
-  if (digitalRead(tombol) == LOW)
+  if (digitalRead(tombol) == HIGH)
   {
     countertombol++;
     delay(500);
