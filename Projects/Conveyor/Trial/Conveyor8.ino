@@ -85,7 +85,7 @@ void loop()
 
 void pushbutton()
 {
-  if (digitalRead(tombol) == HIGH)
+  if (digitalRead(tombol) == LOW)
   {
     countertombol++;
     delay(500);
@@ -133,7 +133,7 @@ void pushbutton()
 
 void IR1()
 {
-  val2 = digitalRead(tombol);
+  val2 = digitalRead(16);
   if (val2 == LOW && countertombol == 1)
   {
     count++;
