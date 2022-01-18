@@ -272,21 +272,21 @@ String kirimHTML(uint8_t statusButton)
     konten +="<title>ICCS</title>\n";
     konten +="</head>\n";
     konten +="<body>\n";
-    konten +="<h1 style=\"font-size: 100px\text-align: center\">INTEGRATED CONVEYOR CONTROL SYSTEM</h1>\n";
+    konten +="<h1 style=\"font-size: 100px; text-align: center\">INTEGRATED CONVEYOR CONTROL SYSTEM</h1>\n";
 
     if(statusButton)
     {
-        konten +="<p style=\"font-size:80px\">Status Conveyor: ON</p>\n";
+        konten +="<p style=\"font-size: 80px; text-align: center\">Status Conveyor: ON</p>\n";
         konten +="<a href=\"/conveyoroff\">\n";
-        konten +="<button type=\"button\" style=\"font-size:150px\">OFF</button>\n";
+        konten +="<button type=\"button\" style=\"font-size: 150px; text-align: center; position: relative; left: 50%\">OFF</button>\n";
         konten +="</a>\n";
     }
 
     else
     {
-        konten +="<p style=\"font-size:80px\">Status Conveyor: OFF</p>\n";
-        konten +="<a href=\"/conveyoron\">/n";
-        konten +="<button type=\"button\" style=\"font-size:150px\">ON</button>\n";
+        konten +="<p style=\"font-size: 80px; text-align: center\">Status Conveyor: OFF</p>\n";
+        konten +="<a href=\"/conveyoron\">\n";
+        konten +="<button type=\"button\" style=\"font-size:150 px; text-align: center; position: relative; left: 50%\">ON</button>\n";
         konten +="</a>\n";
     }
 
